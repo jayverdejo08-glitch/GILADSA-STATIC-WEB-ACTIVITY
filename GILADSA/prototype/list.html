@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Challenges | Giladsa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#">GILADSA</a>
+      <ul class="nav-links">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="list.html" aria-current="page">Challenges</a></li>
+        <li><a href="#">Levels</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Rewards</a></li>
+      </ul>
+      <span class="nav-user">Instructor &middot; <a href="#">Log out</a></span>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <div class="page-head">
+      <div>
+        <h1>Challenges</h1>
+        <p>Puzzles, coding tasks and quizzes students solve in each level.</p>
+      </div>
+      <a class="btn btn-primary" href="form.html">+ Add challenge</a>
+    </div>
+
+    <!-- Search and filters (names match the challenge columns) -->
+    <form class="toolbar card" action="list.html" method="get" role="search">
+      <div class="field field-search">
+        <label for="Challenge_Title">Search by title</label>
+        <input type="search" id="Challenge_Title" name="Challenge_Title" placeholder="e.g. Find the target" maxlength="30">
+      </div>
+      <div class="field">
+        <label for="Challenge_Type">Type</label>
+        <select id="Challenge_Type" name="Challenge_Type">
+          <option value="">All types</option>
+          <option value="Puzzle">Puzzle</option>
+          <option value="Coding">Coding</option>
+          <option value="Quiz">Quiz</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="Level_ID">Level</label>
+        <select id="Level_ID" name="Level_ID">
+          <option value="">All levels</option>
+          <option value="1">L1: Intro to stacks</option>
+          <option value="2">L2: Searching arrays</option>
+          <option value="3">L3: Sorting basics</option>
+          <option value="4">L4: Linked list intro</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+    <!-- List (Read). Each cell has data-label so the phone layout can show the column name -->
+    <div class="card table-card">
+      <table class="table">
+        <caption>Showing 1&ndash;6 of 36 challenges</caption>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Type</th>
+            <th scope="col">Level</th>
+            <th scope="col" class="num">Max points</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="ID">1</td>
+            <td data-label="Title" class="cell-title">Find the target</td>
+            <td data-label="Type"><span class="badge">Coding</span></td>
+            <td data-label="Level">L2: Searching arrays</td>
+            <td data-label="Max points" class="num">100</td>
+            <td class="cell-actions"><div class="actions">
+              <a class="btn btn-sm" href="form.html">Edit</a>
+              <button class="btn btn-sm btn-danger" type="button">Delete</button>
+            </div></td>
+          </tr>
+          <tr>
+            <td data-label="ID">2</td>
+            <td data-label="Title" class="cell-title">Sort the cards</td>
+            <td data-label="Type"><span class="badge badge-puzzle">Puzzle</span></td>
+            <td data-label="Level">L3: Sorting basics</td>
+            <td data-label="Max points" class="num">80</td>
+            <td class="cell-actions"><div class="actions">
+              <a class="btn btn-sm" href="form.html">Edit</a>
+              <button class="btn btn-sm btn-danger" type="button">Delete</button>
+            </div></td>
+          </tr>
+          <tr>
+            <td data-label="ID">3</td>
+            <td data-label="Title" class="cell-title">Stack or queue?</td>
+            <td data-label="Type"><span class="badge badge-quiz">Quiz</span></td>
+            <td data-label="Level">L1: Intro to stacks</td>
+            <td data-label="Max points" class="num">50</td>
+            <td class="cell-actions"><div class="actions">
+              <a class="btn btn-sm" href="form.html">Edit</a>
+              <button class="btn btn-sm btn-danger" type="button">Delete</button>
+            </div></td>
+          </tr>
+          <tr>
+            <td data-label="ID">4</td>
+            <td data-label="Title" class="cell-title">Reverse a list</td>
+            <td data-label="Type"><span class="badge">Coding</span></td>
+            <td data-label="Level">L2: Searching arrays</td>
+            <td data-label="Max points" class="num">100</td>
+            <td class="cell-actions"><div class="actions">
+              <a class="btn btn-sm" href="form.html">Edit</a>
+              <button class="btn btn-sm btn-danger" type="button">Delete</button>
+            </div></td>
+          </tr>
+          <tr>
+            <td data-label="ID">5</td>
+            <td data-label="Title" class="cell-title">Match the node</td>
+            <td data-label="Type"><span class="badge badge-puzzle">Puzzle</span></td>
+            <td data-label="Level">L4: Linked list intro</td>
+            <td data-label="Max points" class="num">60</td>
+            <td class="cell-actions"><div class="actions">
+              <a class="btn btn-sm" href="form.html">Edit</a>
+              <button class="btn btn-sm btn-danger" type="button">Delete</button>
+            </div></td>
+          </tr>
+          <tr>
+            <td data-label="ID">6</td>
+            <td data-label="Title" class="cell-title">Binary search quiz</td>
+            <td data-label="Type"><span class="badge badge-quiz">Quiz</span></td>
+            <td data-label="Level">L2: Searching arrays</td>
+            <td data-label="Max points" class="num">50</td>
+            <td class="cell-actions"><div class="actions">
+              <a class="btn btn-sm" href="form.html">Edit</a>
+              <button class="btn btn-sm btn-danger" type="button">Delete</button>
+            </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <nav class="pagination" aria-label="Pagination">
+      <span>Page 1 of 6</span>
+      <ul>
+        <li><a class="btn btn-sm" href="#" aria-disabled="true">&lt; Prev</a></li>
+        <li><a class="btn btn-sm btn-primary" href="#" aria-current="page">1</a></li>
+        <li><a class="btn btn-sm" href="#">Next &gt;</a></li>
+      </ul>
+    </nav>
+  </main>
+</body>
+</html>
